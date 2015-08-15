@@ -1,0 +1,420 @@
+
+
+
+ 
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Register A New Climate Service</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+	href='public/stylesheets/bootstrap.css'>
+<link rel="stylesheet"
+	href='public/stylesheets/bootstrap.min.css'>	
+<link rel="stylesheet"
+	href='public/stylesheets/navbar-fixed-top.css'>
+<link rel="stylesheet"
+	href='public/stylesheets/custom.css'>
+<link rel="stylesheet" media="screen"
+	href='public/stylesheets/main.css'>
+<link rel="shortcut icon" type="image/png"
+	href='public/images/favicon.png'>
+<link rel="stylesheet"
+	href='public/stylesheets/bootstrap-editable.css'>
+<link rel="stylesheet"
+	href='public/stylesheets/livefitler.css'>
+<link rel="stylesheet"
+    href='public/stylesheets/custom_recommend.css'>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/vis/3.11.0/vis.min.css">
+<link rel="stylesheet" 
+	href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
+
+<script type="text/javascript" src='public/javascripts/jquery-1.11.3.min.js'></script>
+<script type="text/javascript" src='public/javascripts/bootstrap.min.js'></script>
+<script type="text/javascript" src='public/javascripts/parameter.js'></script>
+<script type='text/javascript' src='public/javascripts/bootstrap-editable.min.js'></script>
+<!--  
+<script type="text/javascript" src='public/javascripts/edit_button.js'></script>
+<script type="text/javascript" src='public/javascripts/livefitler.js'></script>
+-->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+
+
+</head>
+
+<body>
+	
+	<!-- Header -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="padding-bottom: 0;" href="/">
+					<div>
+					<img src='public/images/NASA_JPL_logo.png' style="height: 30px; width: 180px;">&nbsp&nbsp
+					<img src='public/images/logo.png' style="height: 15px; width: 200px;">
+					</div>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" style="height:">
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Web Service<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/climateService/mostRecentlyAddedClimateServices">Most Recently Added</a></li>
+							<li><a href="/climateService/mostRecentlyUsedClimateServices">Most Recently Used</a></li>
+							<li><a href="/climateService/mostPopularServices">Most Popular</a></li>
+							<li><a href="/climateService/allServices">Service List</a></li>
+							
+								<li><a href="/climateService/addAClimateService">Register A Service</a></li>
+							
+							<li><a>Search Service</a></li>
+						</ul>				
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dataset<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a>Most Popular</a></li>
+							<li><a href="/dataSet/allDatasets">Dataset List</a></li>
+							
+								<li><a href="#">Register A Dataset</a></li>
+							
+							<li><a href="/dataSet/searchDataSet">Search Dataset</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Analytics<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/serviceLog">Service Execution Log</a></li>
+							<li><a href="/searchServiceLog">Search Service Log</a></li>
+							<li><a href="/serviceLogRecommend">Semantic Service Analytics</a></li>
+							<li><a href="/datasetRecommend">Semantic Dataset Analytics</a></li>
+							<li><a href="/profileRecommend">User Analytics</a></li>
+							<li><a href="/serviceLogGraph">Service Execution Log Analytics</a></li>
+							<li><a href="/searchAndGenerateWorkflow">Generate Workflow</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Scientist<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/scientist/allUsers">All Users</a></li>
+							<li><a href="/scientist/searchUser">Search User</a></li>
+							
+								<li><a href="#">Most Active Users</a></li>
+								<li><a href="/bugs">Bug Report</a></li>
+								<li><a href="/bug/list">Bug List</a></li>
+							
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/">Home</a></li>
+							<li><a href="/aboutUs">About Us</a></li>
+							<li><a href="/aboutProject">About project</a></li>
+							<li><a href="/tutorial">Tutorial</a></li>
+						</ul>
+					</li>
+					
+					
+						<form class="navbar-form navbar-right" action="/login">
+							<button type="submit" class="btn btn-success">Log in</button>
+						</form>
+						
+										
+											
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<div class="container">
+
+		
+
+<h2 class="text-center">Register a New Climate Service</h2>
+<br>
+
+<div class="container col-md-6">
+    <h2>Add</h2>
+
+    <!-- <form> -->
+     
+
+<form action="/climateService/add" method="GET" >
+    
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="2-D-Variable-Map">
+        </div>
+        <div class="form-group">
+            <label>Purpose</label>
+            <input type="text" class="form-control" id="purpose" name="purpose" placeholder="climate service description">
+        </div>
+        <div class="form-group">
+            <label>Web Service API</label>
+            <input type="text" class="form-control" id="url" name="url" placeholder="cmac/web/twoDimMap">
+        </div>
+        <div class="form-group">
+            <label>Scenario</label>
+            <input type="text" class="form-control" id="scenario" name="scenario" placeholder="12">
+        </div>
+        <div class="form-group">
+            <label>Version</label>
+            <input type="text" class="form-control" id="version" name="version" placeholder="1">
+        </div>
+        <div class="form-group">
+            <label>Root Service Id</label>
+            <input type="text" class="form-control" id="rootServiceId" name="rootServiceId" placeholder="2">
+        </div>
+        <div class="form-group">
+            <label>Homepage URL</label>
+            <input type="text" class="form-control" id="homepage" placeholder="http://www.google.com">
+        </div>
+        <div class="form-group">
+            <!-- <button type="submit" class="btn btn-success btn-lg" data-toggle="modal" data-target="#confirm">Add a Climate Service</button> -->
+            <button type="submit" class="btn btn-success btn-lg" id="addAClimateService">Add a Climate Service</button>
+        </div>
+        <div class="well">
+            <form>
+                <div class="form-group">
+                    <label>Descriptive Parameter Name</label>
+                    <input type="text" class="form-control" id="parameterNameDescriptive" placeholder="-descriptive-">
+                </div>
+                <div class="form-group">
+                    <label>Functional Parameter Name</label>
+                    <input type="text" class="form-control" id="parameterNameFunctional" placeholder="-functional-">
+                </div>
+                <div class="form-group">
+                    <label>Parameter Type</label>
+                    <select class="form-control" id="parameterType" onchange="Javascript:disableItem()">
+                        <option value="Input text">Input text</option>
+                        <option value="Input area">Input area</option>
+                        <option value="Multiple selects">Multiple selects</option>
+                        <option value="Radio button">Radio button</option>
+                        <option value="Dropdown list">Dropdown list</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Parameter Values</label>
+                    <input type="text" class="form-control" id="parameterValues" placeholder="2" disabled>
+                </div>
+                <div class="form-group">
+                    <label>Default Values</label>
+                    <input type="text" class="form-control" id="defaultValues" placeholder="2">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-info" onclick="Javascript:addRow()">Add a Parameter</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="well">
+        	<form>
+                <div class="form-group">
+                    <label>Button Name</label>
+                    <input type="text" class="form-control" id="outputName" placeholder="-Enter Output Name-">
+                </div>
+                <div class="form-group">
+                    <label>Output Button Url</label>
+                    <input type="text" class="form-control" id="outputUrl" placeholder="-Enter Output Button Url-">
+                </div>
+                
+                <div class="text-center">
+                    <button type="button" class="btn btn-info" onclick="Javascript:addButton()">Add an output button</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="well">
+
+            <h4>Rule Generator</h4>
+            
+            <div id= "ruleAlert" class="alert alert-success">
+                <strong>Successfully added!</strong>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label>Data source</label>
+                    <input type="text" class="form-control" id="dataSource" placeholder="-Enter Data Source-" value="GFDL/ESM2G">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-success" onclick="Javascript:addDataSource()">Add data source</button>
+                    <button type="button" class="btn btn-danger" onclick="Javascript:resetDataSource()">Reset data source</button>
+                </div>
+                <div class="form-group">
+                    <label>Data group</label>
+                    <input type="text" class="form-control" id="dataGroup" placeholder="-Enter Data Group-" value="Model: Historical">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-success" onclick="Javascript:addGroup()">Add group</button>
+                </div>
+                <div class="form-group">
+                    <label>Enabled variable</label>
+                    <input type="text" class="form-control" id="variable" placeholder="-Enter Variable-" value="clt">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-success" onclick="Javascript:addVariable()">Add variable</button>
+                    <button type="button" class="btn btn-danger" onclick="Javascript:resetVariable()">Reset variable</button>
+                </div>       
+            </form>
+            <br>
+
+            <div class="well">
+                <div class="text-center">
+                    <button type="button" class="btn btn-lg btn-info" onclick="Javascript:continue1()">Add rule</button>
+                    <button type="button" class="btn btn-lg btn-warning" onclick="Javascript:deleteAllData()">Reset rule</button>
+                </div>
+            </div>
+            
+            <div class="well">
+                <label>Rule Preview</label>
+                <textarea class="form-control" rows="10" id="preview" placeholder ="Placeholder for the json data"></textarea>
+            
+                <div class="input-group">
+                    <input type="text" id="valid" class="form-control" placeholder="-Valiadtion Result-">
+                    <span class="input-group-btn">
+                    <button class="btn btn-warning" onclick="Javascript:validate()" type="button">Validate Json Format and Save</button>
+                    </span>
+                </div><!-- /input-group -->
+
+            </div>
+
+            <div class="well">
+                <div class="form-group">
+                    <label>Show Cache</label>
+                    <input type="text" class="form-control" id="demo1" placeholder="-Show Cache-" >
+                </div>
+            </div>
+
+            
+           
+        </div>
+        
+    <!--</form>  --> 
+</form>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirm" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to add this climate service?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal" onclick="Javascript:window.location.href='/climateService/add'">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container col-md-6">
+    <h2>Input Part Preview</h2>
+
+    <form>
+        <table id="parameterPreview" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th class="col-md-2">Parameter Name</th>
+                <th class="col-md-3">Value</th>
+                <th class="col-md-1">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </form>
+    
+    <h2> Output Part Preview</h2>
+    <form>
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Output</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <a id="serviceImgLink" href="" class="text-center">
+                        <img src="" id="serviceImg" class="img-responsive">
+                        <h1>Placeholder for the image</h1>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="commentLink" href="">
+                        <textarea class="form-control" rows="3" id="comment" placeholder ="Placeholder for the link"></textarea>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="form-control" rows="10" id="message" placeholder ="Placeholder for the message"></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-lg">Download Data</button>
+        </div>
+        <br>
+        <div class="text-center" id="output">
+            
+        </div>
+    </form>
+    
+</div>
+
+
+	</div>
+	
+	<!-- Footer -->
+	<div class="footer" >
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<p class="text-muted" style="text-align: right; font-size: 14px;">&copy;
+					Carnegie Mellon University ; NASA Jet Propulsion Laboratory 2015</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
